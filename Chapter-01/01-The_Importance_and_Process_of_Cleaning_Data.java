@@ -30,3 +30,15 @@ try {
 
 // The output of this examle is as follows:
 // firstname : Smith
+
+//------------------------------------------------------//
+
+// Simple data cleaning may involve converting the text to lowercase, replacing certain text with blanks, and removing multiple whitespace characters with a single blank. One way of doing this is shown next, where a combination of the String class' toLowerCase, replaceAll, and trim methods are used. Here, a string containing dirty text is processed:
+
+dirtyText = dirtyText
+    .toLowerCase()
+    .replaceAll("[\\d[^\\w\\s]]+", "
+    .trim();
+while(dirtyText.contains("  ")) {
+      dirtyText = dirtyText.replaceAll("  ", " ");
+}
